@@ -11,6 +11,8 @@
 		2F479F9328C2830F00359499 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F479F9228C2830F00359499 /* GoogleService-Info.plist */; };
 		2F87174628C2ECD200707742 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87174528C2ECD200707742 /* HomeViewController.swift */; };
 		2F87174828C2ECE100707742 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87174728C2ECE100707742 /* HomeView.swift */; };
+		2F87174A28C2F3C200707742 /* UserDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87174928C2F3C200707742 /* UserDetailsTableViewCell.swift */; };
+		2F87174C28C2F76E00707742 /* DetailsUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87174B28C2F76E00707742 /* DetailsUserModel.swift */; };
 		2F9C664728BA86DC003F5735 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C664628BA86DC003F5735 /* RegisterViewController.swift */; };
 		2F9C664928BA86FF003F5735 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C664828BA86FF003F5735 /* RegisterView.swift */; };
 		2FA6A51C28ADD55900A3F9BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA6A51B28ADD55900A3F9BD /* AppDelegate.swift */; };
@@ -51,6 +53,8 @@
 		2F479F9228C2830F00359499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F87174528C2ECD200707742 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2F87174728C2ECE100707742 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2F87174928C2F3C200707742 /* UserDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		2F87174B28C2F76E00707742 /* DetailsUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUserModel.swift; sourceTree = "<group>"; };
 		2F9C664628BA86DC003F5735 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2F9C664828BA86FF003F5735 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		2FA6A51828ADD55900A3F9BD /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,8 +114,18 @@
 			children = (
 				2F87174528C2ECD200707742 /* HomeViewController.swift */,
 				2F87174728C2ECE100707742 /* HomeView.swift */,
+				2F87174928C2F3C200707742 /* UserDetailsTableViewCell.swift */,
+				2F87174D28C2F85400707742 /* Model */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		2F87174D28C2F85400707742 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F87174B28C2F76E00707742 /* DetailsUserModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2F9C664528BA86BD003F5735 /* Register */ = {
@@ -462,12 +476,14 @@
 				2FA6A52028ADD55900A3F9BD /* LoginViewController.swift in Sources */,
 				2FA6A51C28ADD55900A3F9BD /* AppDelegate.swift in Sources */,
 				2FA6A51E28ADD55900A3F9BD /* SceneDelegate.swift in Sources */,
+				2F87174C28C2F76E00707742 /* DetailsUserModel.swift in Sources */,
 				2F87174828C2ECE100707742 /* HomeView.swift in Sources */,
 				2F9C664928BA86FF003F5735 /* RegisterView.swift in Sources */,
 				2F9C664728BA86DC003F5735 /* RegisterViewController.swift in Sources */,
 				2F87174628C2ECD200707742 /* HomeViewController.swift in Sources */,
 				2FA6A54F28AE84B600A3F9BD /* LoginView.swift in Sources */,
 				2FDF296828C2982100D170A3 /* Alert.swift in Sources */,
+				2F87174A28C2F3C200707742 /* UserDetailsTableViewCell.swift in Sources */,
 				2FA6A52628ADD55900A3F9BD /* Login.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

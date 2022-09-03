@@ -13,6 +13,7 @@ class HomeView: UIView {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         table.backgroundColor = .white
+        table.register(UserDetailsTableViewCell.self, forCellReuseIdentifier: UserDetailsTableViewCell.identifier)
         return table
     }()
     
@@ -27,7 +28,7 @@ class HomeView: UIView {
     }
     
     private func addSubviews() {
-        backgroundColor = .red
+        backgroundColor = .white
         addSubview(tabelView)
     }
     
@@ -38,5 +39,10 @@ class HomeView: UIView {
             tabelView.rightAnchor.constraint(equalTo: rightAnchor),
             tabelView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+    
+    func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+        tabelView.delegate = delegate
+        tabelView.dataSource = dataSource
     }
 }
