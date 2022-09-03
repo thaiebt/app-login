@@ -22,6 +22,7 @@ class LoginView: UIView {
         label.text = "Login"
         return label
     }()
+    
     private lazy var logoImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false

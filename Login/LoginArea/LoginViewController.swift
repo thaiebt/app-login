@@ -62,10 +62,8 @@ extension LoginViewController: LoginViewClickDelegate {
                 return
             }
             
-            self.alert?.getAlert(title: "Sucesso", message: "Login efetuado com sucesso", buttonTitle: "OK", completion: {
-                print("falta fazer fluxo")
-            })
-            
+            let controller = HomeViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
         })
     }
     
