@@ -9,5 +9,5 @@ import UIKit
 
 struct DetailUserModel {
     let name: String
-    let image: UIImage?
+    let image: String
 }

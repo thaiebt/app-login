@@ -9,49 +9,35 @@ import UIKit
 
 class UserDetailsTableViewCell: UITableViewCell {
     
-    private lazy var profileImage: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFit
-        return image
-    }()
-    
-    private lazy var nameLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .darkGray
-        return label
+    private lazy var userDetailsView: UserDetailsView = {
+        let view = UserDetailsView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     static let identifier: String = "userDetails"
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubviews()
-        setupConstraints()
+        setupLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func addSubviews() {
-        contentView.backgroundColor = .white
+    private func setupLayout() {
+        contentView.addSubview(userDetailsView)
         
-        contentView.addSubview(profileImage)
-        contentView.addSubview(nameLabel)
-    }
-
-    private func setupConstraints() {
         NSLayoutConstraint.activate([
-            profileImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            profileImage.leadingAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
-            profileImage.heightAnchor.constraint(equalToConstant: 80),
-            profileImage.widthAnchor.constraint(equalToConstant: 80),
-            
-            nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            nameLabel.leadingAnchor.constraint(equalTo: profileImage.rightAnchor, constant: 16),
-            nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
+            userDetailsView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            userDetailsView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            userDetailsView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            userDetailsView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
+    }
+    
+    func updateCell(withData data: DetailUserModel) {
+        userDetailsView.updateView(withData: data)
     }
 }

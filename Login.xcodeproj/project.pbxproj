@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1EBBFD51BEB7CA0962EC5D55 /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0484542FA5F9AC551C4E324B /* Pods_Login.framework */; };
 		2F479F9328C2830F00359499 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F479F9228C2830F00359499 /* GoogleService-Info.plist */; };
+		2F66572E28C43F7A003D4A6D /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66572D28C43F7A003D4A6D /* UserDetailsView.swift */; };
 		2F87174628C2ECD200707742 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87174528C2ECD200707742 /* HomeViewController.swift */; };
 		2F87174828C2ECE100707742 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87174728C2ECE100707742 /* HomeView.swift */; };
 		2F87174A28C2F3C200707742 /* UserDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87174928C2F3C200707742 /* UserDetailsTableViewCell.swift */; };
@@ -51,6 +52,7 @@
 		0484542FA5F9AC551C4E324B /* Pods_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1495581C25B8B550C4D25638 /* Pods-Login-LoginUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login-LoginUITests.debug.xcconfig"; path = "Target Support Files/Pods-Login-LoginUITests/Pods-Login-LoginUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F479F9228C2830F00359499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2F66572D28C43F7A003D4A6D /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
 		2F87174528C2ECD200707742 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2F87174728C2ECE100707742 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2F87174928C2F3C200707742 /* UserDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				2F87174528C2ECD200707742 /* HomeViewController.swift */,
 				2F87174728C2ECE100707742 /* HomeView.swift */,
 				2F87174928C2F3C200707742 /* UserDetailsTableViewCell.swift */,
+				2F66572D28C43F7A003D4A6D /* UserDetailsView.swift */,
 				2F87174D28C2F85400707742 /* Model */,
 			);
 			path = Home;
@@ -481,6 +484,7 @@
 				2F9C664928BA86FF003F5735 /* RegisterView.swift in Sources */,
 				2F9C664728BA86DC003F5735 /* RegisterViewController.swift in Sources */,
 				2F87174628C2ECD200707742 /* HomeViewController.swift in Sources */,
+				2F66572E28C43F7A003D4A6D /* UserDetailsView.swift in Sources */,
 				2FA6A54F28AE84B600A3F9BD /* LoginView.swift in Sources */,
 				2FDF296828C2982100D170A3 /* Alert.swift in Sources */,
 				2F87174A28C2F3C200707742 /* UserDetailsTableViewCell.swift in Sources */,

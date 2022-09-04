@@ -11,6 +11,10 @@ class HomeViewController: UIViewController {
     
     private var homeView: HomeView = HomeView()
     
+    let data: [DetailUserModel] = [DetailUserModel(name: "Leandro", image: "menino1"),
+                                    DetailUserModel(name: "Leandro", image: "menino2"),
+                                    DetailUserModel(name: "Thainá", image: "menina1")]
+    
     override func loadView() {
         super.loadView()
         view = homeView
@@ -30,11 +34,12 @@ extension HomeViewController: UITableViewDelegate {
 //MARK: Extension TableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: UserDetailsTableViewCell.identifier, for: indexPath) as? UserDetailsTableViewCell else { return UITableViewCell() }
+        cell.updateCell(withData: data[indexPath.row])
         return cell
     }
     

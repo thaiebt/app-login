@@ -51,17 +51,17 @@ extension LoginViewController: LoginViewClickDelegate {
         let password = loginView.getPassword()
         
         authentication?.signIn(withEmail: email, password: password, completion: { result, error in
-            if let error = error {
-                self.alert?.getAlert(title: "Atenção", message: "Dados incorretos! Verifique as informações e tente novamente", buttonTitle: "Cancelar")
-                print(error.localizedDescription)
-                return
-            }
-            
-            if result == nil {
-                self.alert?.getAlert(title: "Atenção", message: "Tivemos um problema ao realizar o login. Tente novamente mais tarde", buttonTitle: "Cancelar")
-                return
-            }
-            
+//            if let error = error {
+//                self.alert?.getAlert(title: "Atenção", message: "Dados incorretos! Verifique as informações e tente novamente", buttonTitle: "Cancelar")
+//                print(error.localizedDescription)
+//                return
+//            }
+//
+//            if result == nil {
+//                self.alert?.getAlert(title: "Atenção", message: "Tivemos um problema ao realizar o login. Tente novamente mais tarde", buttonTitle: "Cancelar")
+//                return
+//            }
+//
             let controller = HomeViewController()
             self.navigationController?.pushViewController(controller, animated: true)
         })
