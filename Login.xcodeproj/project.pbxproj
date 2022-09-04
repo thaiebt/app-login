@@ -10,6 +10,8 @@
 		1EBBFD51BEB7CA0962EC5D55 /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0484542FA5F9AC551C4E324B /* Pods_Login.framework */; };
 		2F479F9328C2830F00359499 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F479F9228C2830F00359499 /* GoogleService-Info.plist */; };
 		2F66572E28C43F7A003D4A6D /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66572D28C43F7A003D4A6D /* UserDetailsView.swift */; };
+		2F66573228C449E4003D4A6D /* SportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66573128C449E4003D4A6D /* SportTableViewCell.swift */; };
+		2F66573428C44B18003D4A6D /* SportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66573328C44B18003D4A6D /* SportView.swift */; };
 		2F87174628C2ECD200707742 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87174528C2ECD200707742 /* HomeViewController.swift */; };
 		2F87174828C2ECE100707742 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87174728C2ECE100707742 /* HomeView.swift */; };
 		2F87174A28C2F3C200707742 /* UserDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F87174928C2F3C200707742 /* UserDetailsTableViewCell.swift */; };
@@ -53,6 +55,8 @@
 		1495581C25B8B550C4D25638 /* Pods-Login-LoginUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login-LoginUITests.debug.xcconfig"; path = "Target Support Files/Pods-Login-LoginUITests/Pods-Login-LoginUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F479F9228C2830F00359499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F66572D28C43F7A003D4A6D /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
+		2F66573128C449E4003D4A6D /* SportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewCell.swift; sourceTree = "<group>"; };
+		2F66573328C44B18003D4A6D /* SportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportView.swift; sourceTree = "<group>"; };
 		2F87174528C2ECD200707742 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2F87174728C2ECE100707742 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2F87174928C2F3C200707742 /* UserDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -111,13 +115,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F66572F28C4498A003D4A6D /* UserDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				2F87174928C2F3C200707742 /* UserDetailsTableViewCell.swift */,
+				2F66572D28C43F7A003D4A6D /* UserDetailsView.swift */,
+			);
+			path = UserDetailsCell;
+			sourceTree = "<group>";
+		};
+		2F66573028C449AE003D4A6D /* SportCell */ = {
+			isa = PBXGroup;
+			children = (
+				2F66573128C449E4003D4A6D /* SportTableViewCell.swift */,
+				2F66573328C44B18003D4A6D /* SportView.swift */,
+			);
+			path = SportCell;
+			sourceTree = "<group>";
+		};
 		2F87174428C2ECBC00707742 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2F66573028C449AE003D4A6D /* SportCell */,
 				2F87174528C2ECD200707742 /* HomeViewController.swift */,
 				2F87174728C2ECE100707742 /* HomeView.swift */,
-				2F87174928C2F3C200707742 /* UserDetailsTableViewCell.swift */,
-				2F66572D28C43F7A003D4A6D /* UserDetailsView.swift */,
+				2F66572F28C4498A003D4A6D /* UserDetailsCell */,
 				2F87174D28C2F85400707742 /* Model */,
 			);
 			path = Home;
@@ -174,9 +196,9 @@
 		2FA6A51A28ADD55900A3F9BD /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				2F87174428C2ECBC00707742 /* Home */,
 				2FA6A51B28ADD55900A3F9BD /* AppDelegate.swift */,
 				2FA6A51D28ADD55900A3F9BD /* SceneDelegate.swift */,
+				2F87174428C2ECBC00707742 /* Home */,
 				2F9C664A28BA87F5003F5735 /* LoginArea */,
 				2F9C664528BA86BD003F5735 /* Register */,
 				2FDF296628C296D500D170A3 /* Alert */,
@@ -484,6 +506,8 @@
 				2F9C664928BA86FF003F5735 /* RegisterView.swift in Sources */,
 				2F9C664728BA86DC003F5735 /* RegisterViewController.swift in Sources */,
 				2F87174628C2ECD200707742 /* HomeViewController.swift in Sources */,
+				2F66573228C449E4003D4A6D /* SportTableViewCell.swift in Sources */,
+				2F66573428C44B18003D4A6D /* SportView.swift in Sources */,
 				2F66572E28C43F7A003D4A6D /* UserDetailsView.swift in Sources */,
 				2FA6A54F28AE84B600A3F9BD /* LoginView.swift in Sources */,
 				2FDF296828C2982100D170A3 /* Alert.swift in Sources */,
