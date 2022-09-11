@@ -11,9 +11,13 @@ class HomeViewController: UIViewController {
     
     private var homeView: HomeView = HomeView()
     
-    let data: [DetailUserModel] = [DetailUserModel(name: "Leandro", image: "menino1"),
+    let userData: [DetailUserModel] = [DetailUserModel(name: "Leandro", image: "menino1"),
                                     DetailUserModel(name: "Leandro", image: "menino2"),
                                     DetailUserModel(name: "Thainá", image: "menina1")]
+    
+    let sportData: [SportModel] = [SportModel(name: "Ciclismo", image: "ciclismo"),
+                                   SportModel(name: "Corrida", image: "corrida"),
+                                   SportModel(name: "Yoga", image: "yoga")]
     
     override func loadView() {
         super.loadView()
@@ -28,23 +32,26 @@ class HomeViewController: UIViewController {
 
 //MARK: Extension TableViewDelegate
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
 }
 
 //MARK: Extension TableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count + 1
+        return userData.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == data.count {
+        if indexPath.row == userData.count {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SportTableViewCell.identifier, for: indexPath) as? SportTableViewCell else { return UITableViewCell() }
+            cell.updateCell(data: sportData)
             return cell
         }
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: UserDetailsTableViewCell.identifier, for: indexPath) as? UserDetailsTableViewCell else { return UITableViewCell() }
-        cell.updateCell(withData: data[indexPath.row])
+        cell.updateCell(withData: userData[indexPath.row])
         return cell
     }
     

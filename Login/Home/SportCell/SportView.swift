@@ -12,7 +12,7 @@ class SportView: UIView {
     private lazy var collectionView: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout.init())
         collection.translatesAutoresizingMaskIntoConstraints = false
-        collection.backgroundColor = .red
+        collection.backgroundColor = .clear
         collection.showsHorizontalScrollIndicator = false
         collection.delaysContentTouches = false
         
@@ -20,6 +20,7 @@ class SportView: UIView {
         layout.scrollDirection = .horizontal
         
         collection.setCollectionViewLayout(layout, animated: false)
+        collection.register(SportCollectionViewCell.self, forCellWithReuseIdentifier: SportCollectionViewCell.identifier)
         return collection
     }()
     
@@ -41,5 +42,10 @@ class SportView: UIView {
             collectionView.rightAnchor.constraint(equalTo: rightAnchor),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
+    }
+    
+    func configProtocols(delegate: UICollectionViewDelegate, dataSourse: UICollectionViewDataSource) {
+        collectionView.delegate = delegate
+        collectionView.dataSource = dataSourse
     }
 }

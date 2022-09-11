@@ -45,7 +45,6 @@ class UserDetailsView: UIView {
             profileImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             profileImage.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             profileImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
-            profileImage.heightAnchor.constraint(equalToConstant: 80),
             profileImage.widthAnchor.constraint(equalToConstant: 80),
             
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
